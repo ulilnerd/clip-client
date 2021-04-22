@@ -75,6 +75,8 @@ class MainPage extends Component {
                 </div>
                 <h1 style={{textAlign:"center", marginTop:"40px"}} class="demo1">OUR RECENT COLLABORATIONS</h1>
                 <img style={{position:"relative", left:"20%", marginTop: "50px", marginBottom: "50px"}} src={collabs}/>
+
+                {/* test */}
                 
             <Switch>
                 <Route path="/nav">
