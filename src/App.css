@@ -9,6 +9,18 @@
   display:flex;
 }
 
+.containerEqual {
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+}
+
+.containerSpace {
+  display:flex;
+  justify-content:space-around;
+  margin-top:100px;
+}
+
 nav {
   background-color:#4306FF;
   height: 500px;
@@ -76,4 +88,39 @@ input[type=text] {
   font-weight:lighter;
   position:absolute;
   right:5%;
+}
+
+.presentIdeas {
+  width:500px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.demo1 {
+  color:#4306FF;
+}
+
+.startNowButton {
+  font-weight:bolder;
+  background-color:rgb(122,249,188);
+  border: outset;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 100px;
+}
+
+.graySpace {
+  width: 600px;
+  height:400px;
+  background-color:rgb(196,196,196);
+}
+
+.whyUseClip {
+  background-color:rgb(245,244,244);
+  padding-bottom:50px;
 }
