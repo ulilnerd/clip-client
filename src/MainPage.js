@@ -4,6 +4,7 @@ import ClipLogo from './images/clip.png';
 import Hamburger from './images/hamburger.PNG';
 import samplePic from './images/samplepic.PNG';
 import collabs from './images/collabs.PNG';
+import blueHam from './images/blueClipHam.PNG';
 
 import './App.css';
 import Navbar from './Navbar';
@@ -18,6 +19,26 @@ import {
 
 class MainPage extends Component {
 
+    constructor() {
+        super();
+        this.state = {
+            hideNav: true
+        };
+        this.hideNav = this.hideNav.bind(this);
+    }
+
+      hideNav(nav) {
+          if (this.state.hideNav === true) {
+            this.setState({ 
+                hideNav: false
+            });
+          }
+          else if (this.state.hideNav === false) {
+            this.setState({ 
+                hideNav: true
+            });
+          }
+      }
 
     render() {
         return(
@@ -25,7 +46,12 @@ class MainPage extends Component {
             <div>
                 <div class="container"> 
                     <div class="hamburger">
-                        <Link to="/nav"><img class="blueHam" src={Hamburger}/></Link>
+                    {this.state.hideNav === true && <button style={{background: `url(${Hamburger})`, width:"35px", height:"35px", textDecoration: "none", border:"none" , position:"absolute"}} type="button" onClick={() => this.hideNav("hideNav")}></button>}
+                        {this.state.hideNav === false &&
+                        <div class="navBlue">
+                            <button style={{background: `url(${blueHam})`, width:"35px", height:"35px", textDecoration: "none", border:"none" }} type="button" onClick={() => this.hideNav("hideNav")}></button>
+                        </div>}
+                        {this.state.hideNav === false && <Navbar/>}
                     </div>
                     <div class="ClipLogo">
                         <h1><a href="#"><img src={ClipLogo}/></a></h1>

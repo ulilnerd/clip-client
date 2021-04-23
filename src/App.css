@@ -1,5 +1,6 @@
 .ClipLogo {
   margin-left:40%;
+  /* position:absolute; */
 }
 
 .hamburger {
@@ -123,4 +124,11 @@ input[type=text] {
 .whyUseClip {
   background-color:rgb(245,244,244);
   padding-bottom:50px;
+}
+
+.navBlue {
+  background-color:#4306FF;
+  width: 230px;
+  padding-bottom:10px;
+  position:absolute;
 }
