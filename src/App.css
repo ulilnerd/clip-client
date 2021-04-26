@@ -1,6 +1,22 @@
 .ClipLogo {
-  margin-left:40%;
+  /* margin-left:40%; */
   /* position:absolute; */
+}
+
+.firstBlock {
+  border-top-style: dashed;
+  border-bottom-style: dashed;
+  border-width:2px;
+  min-height: 700px;
+}
+
+.blueBlock {
+  min-height:400px;
+  width:100%;
+  background-color:#4306FF;
+  margin-top:150px;
+  left:0%;
+  position:absolute;
 }
 
 .hamburger {
@@ -8,6 +24,7 @@
 }
 .container {
   display:flex;
+  justify-content:space-between;
 }
 
 .containerEqual {
@@ -19,30 +36,38 @@
 .containerSpace {
   display:flex;
   justify-content:space-around;
+  /* justify-content:space-around; */
   margin-top:100px;
+  background-color:rgb(245,244,244);
+  padding-top:50px;
+  padding-bottom:50px;
 }
 
 nav {
-  background-color:#4306FF;
-  height: 500px;
-  width:230px;
-  position:absolute;
-  top:4%;
+  /* background-color:#4306FF; */
+  /* height: 500px; */
+  /* width:230px; */
+  /* position:absolute; */
+  /* top:4%; */
 }
 
 li {
   list-style-type:none;
   margin-top:20px;
+  display:inline;
+  padding:30px;
 }
 
 a:link {
   text-decoration: none;
-  color:white;
+  /* color:white; */
+  color:black;
 }
 
 a:visited {
   text-decoration: none;
-  color:white;
+  /* color:white; */
+  color:black;
 }
 
 a:hover {
@@ -77,7 +102,7 @@ footer {
   font-weight:lighter;
 }
 
-input[type=text] {
+.footerInput {
   border: none;
   border-bottom: 1px solid white;
   background-color:rgb(53,52,52);
@@ -118,11 +143,13 @@ input[type=text] {
 .graySpace {
   width: 600px;
   height:400px;
-  background-color:rgb(196,196,196);
+  background-color:white;
+  border:solid;
+
 }
 
 .whyUseClip {
-  background-color:rgb(245,244,244);
+  /* background-color:rgb(245,244,244); */
   padding-bottom:50px;
 }
 
@@ -131,4 +158,60 @@ input[type=text] {
   width: 230px;
   padding-bottom:10px;
   position:absolute;
+}
+
+.containerFooter {
+  display:flex;
+}
+
+.footerLink:link {
+  color:white;
+}
+.footerLink:visited {
+  color:white;
+}
+
+.whatIsClip {
+  border-bottom-style: dashed;
+  border-width: 2px;
+  min-height:700px;
+}
+
+.grayBanner {
+  min-height:350px;
+  background-color:rgb(245,244,244);
+  /* margin: 100px 0px 100px 0px; */
+  position:absolute;
+  width:100%;
+  left:0%;
+  margin-top:100px;
+}
+
+.clipText {
+  position:absolute;
+  text-align:center;
+  /* background-color:green; */
+  width: 550px;
+  margin: 15px;
+  margin-top:100px;
+}
+
+.clipText2 {
+  position:absolute;
+  width: 350px;
+  margin: 15px;
+  margin-left:40px;
+  margin-top: 80px;
+  text-align:center;
+}
+
+.clipCode {
+  border: solid;
+  width: 500px;
+  height: 50px;
+  border-radius: 6px;
+  position:absolute;
+  margin-top:510px;
+  margin-left:500px;
+  background-color:white;
 }
