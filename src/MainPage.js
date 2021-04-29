@@ -155,7 +155,7 @@ class MainPage extends Component {
                                 <h1>Present!</h1>
                             </div>
                         </div>
-                        <div>
+                        <div style={{position:"relative"}}>
                         {/* <div class="greenBoxShadow"></div> */}
                             <div class="squareBoxLarge">
                                 <div class="boxLargeText">
