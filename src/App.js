@@ -8,6 +8,7 @@ import Login from './Login';
 import PricingPlans from './PricingPlans';
 import WhatWeDo from './WhatWeDo';
 import CreateAccount from './CreateAccount';
+import Dashboard from './Dashboard';
 // import ClipLogo from './images/clip.png';
 
 import {
@@ -31,6 +32,7 @@ class App extends Component {
                 <Route path="/plans" component={PricingPlans}/>
                 <Route path="/whatwedo" component={WhatWeDo}/>
                 <Route path="/createaccount" component={CreateAccount}/>
+                <Route path="/dashboard" component={Dashboard}/>
             </Switch>
             <Footer />
         </body>

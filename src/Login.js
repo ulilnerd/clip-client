@@ -29,7 +29,7 @@ class Login extends Component {
                                 <input class="loginInput" type="text" id="password" name="password"/>
                                 <br/>
                                 <br/>
-                                <div class="loginButton"><a style={{border:"solid 2px black", borderRadius:"6px", padding:"10px 50px 10px 50px", backgroundColor:"white", boxShadow:"6px 6px lightgreen, 6px 6px 0 2px black"}} href="#">SIGN IN</a></div>    
+                                <div class="loginButton"><a style={{border:"solid 2px black", borderRadius:"6px", padding:"10px 50px 10px 50px", backgroundColor:"white", boxShadow:"6px 6px lightgreen, 6px 6px 0 2px black"}} href="/dashboard">SIGN IN</a></div>    
                                 <br/>
                                 <a href="#"><div style={{fontWeight:"lighter", textAlign:"center"}}>Forgot my password?</div></a>
                                 <br/>

@@ -20,9 +20,10 @@
 .container {
   display:flex;
   justify-content:space-between;
-  border-bottom-style: solid;
-  border-width: 3px;
+  /* border-bottom-style: solid;
+  border-width: 3px; */
   background-color: rgb(230,231,232);
+  border: solid black 2px;
 }
 
 .containerSpaceBetween {
@@ -150,7 +151,6 @@ footer {
 
 .containerFooter {
   display:flex;
-  
 }
 
 .footerLink:link {
@@ -313,6 +313,7 @@ label {
     height:500px;
     border:solid #4306FF 4px;
     border-radius:20px;
+    /* text-align:center; */
 }
 .imageHolderBar {
   width:100%;
@@ -331,4 +332,25 @@ label {
   height:15px;
   background-color:rgb(237,231,255);
   margin-top:25%;
+}
+
+.profileNav {
+  background-color: rgb(237,231,255);
+  width:300px;
+  min-height:1000px;
+  padding-top:20px;
+  border-right:solid #4306FF 2px;
+  border-left:solid #4306FF 2px;
+}
+.dashboardList {
+  border-bottom: solid #4306FF 2px;
+  display:block;
+  font-weight:lighter;
+  max-width:200px;
+}
+
+.projectPreview {
+  height:700px;
+  margin-top:20px;
+  margin-right:20px;
 }
