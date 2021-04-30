@@ -5,6 +5,7 @@ import MainPage from './MainPage';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import Login from './Login';
+import PricingPlans from './PricingPlans'
 // import ClipLogo from './images/clip.png';
 
 import {
@@ -25,6 +26,7 @@ class App extends Component {
             <Switch>
                 <Route path="/" component={MainPage} exact/>
                 <Route path="/login" component={Login}/>
+                <Route path="/plans" component={PricingPlans}/>
             </Switch>
             <Footer />
         </body>
