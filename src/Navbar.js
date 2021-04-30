@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import blueHam from './images/blueClipHam.PNG';
-import ClipLogo from './images/clipGray.png';
+import ClipLogo from './images/clipGray.PNG';
 import Login from './Login.js';
 
 class Navbar extends Component {
