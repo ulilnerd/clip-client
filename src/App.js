@@ -1,17 +1,37 @@
+import React, { Component } from 'react';
 import './App.css';
+
 import MainPage from './MainPage';
 import Footer from './Footer';
+import Navbar from './Navbar';
+import Login from './Login';
 // import ClipLogo from './images/clip.png';
 
-function App() {
-  return (
-    <div className="App">
-      <body>
-          <MainPage/>
-          <Footer />
-      </body>
-    </div>
-  );
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+class App extends Component {
+
+  render() {
+    return (
+      <Router>
+      <div className="App">
+        <body>
+            <Navbar/>
+            <Switch>
+                <Route path="/" component={MainPage} exact/>
+                <Route path="/login" component={Login}/>
+            </Switch>
+            <Footer />
+        </body>
+      </div>
+      </Router>
+    );
+  }
 }
 
 export default App;

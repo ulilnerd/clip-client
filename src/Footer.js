@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import clipGray from './images/clipGray.PNG';
+import clipGray from './images/clipWhite.png';
 
 class Footer extends Component {
 

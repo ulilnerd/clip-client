@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import ClipLogo from './images/clip.png';
 import Hamburger from './images/hamburger.PNG';
 import samplePic from './images/samplepic.PNG';
 import blueHam from './images/blueClipHam.PNG';
@@ -49,23 +48,6 @@ class MainPage extends Component {
         return(
             <Router>
             <div>
-                 {/* <div class="container"> 
-                    <div class="hamburger">
-                    {this.state.hideNav === true && <button style={{background: `url(${Hamburger})`, width:"35px", height:"35px", textDecoration: "none", border:"none" , position:"absolute"}} type="button" onClick={() => this.hideNav("hideNav")}></button>}
-                        {this.state.hideNav === false &&
-                        <div class="navBlue">
-                            <button style={{background: `url(${blueHam})`, width:"35px", height:"35px", textDecoration: "none", border:"none" }} type="button" onClick={() => this.hideNav("hideNav")}></button>
-                        </div>}
-                        {this.state.hideNav === false && <Navbar/>}
-                    </div>
-                    <div class="ClipLogo">
-                        <h1><a href="#"><img src={ClipLogo}/></a></h1>
-                    </div>
-                    <div>
-                        <Navbar />
-                    </div>
-                </div>  */}
-                <Navbar />
                 <div class="firstBlock">
                     <div class="blueBlock"></div>
                     
@@ -79,8 +61,7 @@ class MainPage extends Component {
                         </div>
                         <div style={{position:"relative"}}>
                             <div class="whiteSpace"></div>
-                            <div style={{width:"300px", height: "75px", backgroundColor:"lightgreen", borderRadius:"6px", borderColor:"black", border:"solid", position:"absolute", left:"56%", bottom:"29%"}}></div>
-                            <button type="button" style={{width:"300px", height: "75px", position:"absolute", left:"55%", bottom:"30%", backgroundColor:"white", borderRadius: "6px", borderColor:"black", borderWidth:"3px"}}><div style={{fontWeight:"bold", fontSize:"32px"}}>Upload!</div></button>
+                            <button type="button" style={{width:"300px", height: "75px", position:"absolute", left:"55%", bottom:"30%", backgroundColor:"white", borderRadius: "6px", borderColor:"black", borderWidth:"3px", boxShadow:"6px 6px lightgreen, 6px 6px 0 2px black"}}><a href="#" style={{fontWeight:"bold", fontSize:"32px"}}>Upload!</a></button>
                             <p></p>
                             <div class="clipCode">
                                 <div style={{fontWeight:"bold", fontSize:"32px", marginLeft:"5px", display:"inline-block"}}>Clip Code:</div>
@@ -156,7 +137,6 @@ class MainPage extends Component {
                             </div>
                         </div>
                         <div style={{position:"relative"}}>
-                        {/* <div class="greenBoxShadow"></div> */}
                             <div class="squareBoxLarge">
                                 <div class="boxLargeText">
                                     <h1 style={{color:"blue", fontWeight:"lighter"}}>Step 1</h1>

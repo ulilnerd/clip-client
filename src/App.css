@@ -1,11 +1,6 @@
-.ClipLogo {
-  /* margin-left:40%; */
-  /* position:absolute; */
-}
 
 .firstBlock {
   position:relative;
-  /* background-color:red; */
 }
 
 .blueBlock {
@@ -15,6 +10,7 @@
   top:15%;
   left:0%;
   position:absolute;
+
 }
 
 
@@ -24,8 +20,9 @@
 .container {
   display:flex;
   justify-content:space-between;
-  border-bottom-style: dashed;
-  border-width: 2px;
+  border-bottom-style: solid;
+  border-width: 3px;
+  background-color: rgb(230,231,232);
 }
 
 .containerSpace {
@@ -44,14 +41,6 @@
   margin-top:50;
   padding: 50px 0px 50px 0px;
   position:relative;
-}
-
-nav {
-  /* background-color:#4306FF; */
-  /* height: 500px; */
-  /* width:230px; */
-  /* position:absolute; */
-  /* top:4%; */
 }
 
 li {
@@ -156,6 +145,7 @@ footer {
 
 .containerFooter {
   display:flex;
+  
 }
 
 .footerLink:link {
@@ -204,6 +194,7 @@ footer {
   height:800px;
   border:solid black;
   margin-left:50px;
+  box-shadow:20px -20px lightgreen, 20px -20px 0 3px black;
 }
 
 .bigBlueNum {
@@ -235,4 +226,43 @@ footer {
    top:175px;
    left:150px;
    max-width:400px;
+}
+
+.loginArea {
+  position:relative;
+  margin-top:50px;
+}
+
+.featuredCommWork {
+  position:relative;
+}
+
+.loginBox {
+  border: solid #4306FF;
+  border-radius: 50px;
+  padding:60px 60px 20px 60px;
+}
+
+label {
+  font-weight:bold;
+  font-size: 18px;
+}
+
+.loginInput {
+  width: 300px;
+  padding: 6px 20px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border-width: 1px;
+  box-sizing: border-box;
+}
+
+.loginInput[type=text] {
+  border-radius: 10px;
+}
+
+.loginButton {
+    text-align:center;
+    font-weight:bold;
+    font-size: 18px;
 }
