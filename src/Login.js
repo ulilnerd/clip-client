@@ -4,6 +4,9 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 import featuredCommWork from './images/ClipImage-10.png';
+import redcircle from './images/redcircle.png';
+import yellowcircle from './images/yellowcircle.png';
+import greencircle from './images/greencircle.png';
 
 class Login extends Component {
 
@@ -36,10 +39,16 @@ class Login extends Component {
                             </form>
                         </div>
                    </div>
-                   <div class="featuredCommWork">
-                        <div style={{position:"absolute",left:"40%",top:"18%",fontWeight:"lighter"}}><i>Featured community work</i></div>
-                        <img style={{width:"1000px", height:"700px"}} src={featuredCommWork}/>
-                   </div>
+                   <div class="imageHolder" style={{margin:"100px 50px 0px 50px"}}>
+                    <div class="imageHolderBar">
+                        <div style={{marginLeft:"15px", paddingTop:"5px"}}>
+                            <img src={greencircle} style={{width:"20px", height:"20px"}}/>
+                            <img src={yellowcircle} style={{width:"18px", margin:"0px 5px 0px 5px"}}/>
+                            <img src={redcircle} style={{width:"20px", height:"20px"}}/>
+                        </div>
+                    </div>
+                    <div style={{fontWeight:"lighter", textAlign:"center", marginTop:"10px"}}><i>Featured community work</i></div>
+                </div>
                </div>
            </div>
         );

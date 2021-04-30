@@ -5,6 +5,10 @@ import paperClipRotate from './images/paperClipRotate.png';
 import postItRotate from './images/postItRotate.png';
 import faces from './images/faces.png';
 
+import redcircle from './images/redcircle.png';
+import yellowcircle from './images/yellowcircle.png';
+import greencircle from './images/greencircle.png';
+
 class WhatWeDo extends Component {
 
 
@@ -13,7 +17,15 @@ class WhatWeDo extends Component {
             <div>
 
             <div class="containerCenter">
-                <div class="imageHolder" style={{marginTop:"50px"}}></div>
+                <div class="imageHolder" style={{marginTop:"50px"}}>
+                    <div class="imageHolderBar">
+                        <div style={{marginLeft:"15px", paddingTop:"5px"}}>
+                            <img src={greencircle} style={{width:"20px", height:"20px"}}/>
+                            <img src={yellowcircle} style={{width:"18px", margin:"0px 5px 0px 5px"}}/>
+                            <img src={redcircle} style={{width:"20px", height:"20px"}}/>
+                        </div>
+                    </div>
+                </div>
                 <div style={{width:"550px", position:"relative"}}>
                     <div class="clipText" style={{maxWidth:"500px", marginLeft:"50px", top:"20%"}}>
                         <h1 style={{fontSize:"48px"}}>Present your ideas with confidence.</h1>

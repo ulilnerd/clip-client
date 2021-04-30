@@ -9,6 +9,10 @@ import alignCenter from './images/align-center.png';
 import font from './images/font.png';
 import fill from './images/fill.png';
 
+import redcircle from './images/redcircle.png';
+import yellowcircle from './images/yellowcircle.png';
+import greencircle from './images/greencircle.png';
+
 class PricingPlans extends Component {
 
 
@@ -16,11 +20,28 @@ class PricingPlans extends Component {
         return(
            <div>
                <div class="containerCenter">
-                    <div style={{position:"relative"}}>
-                    <h2 style={{position:"absolute",left:"10%"}}>Plan <b style={{color:"#4306FF"}}>&darr;</b></h2>
+                    {/* <div style={{position:"relative"}}>
+                        <h2 style={{position:"absolute",left:"10%"}}>Plan <b style={{color:"#4306FF"}}>&darr;</b></h2>
                         <img style={{width:"600px", height:"450px",position:"absolute",left:"20%",top:"20%"}} src={examplePic}/>
                         <img style={{width:"1000px", height:"700px"}} src={featuredCommWork}/>
+                    </div> */}
+                <h2 style={{position:"absolute",left:"15%"}}>Plan <b style={{color:"#4306FF"}}>&darr;</b></h2>
+                <div class="imageHolder" style={{margin:"100px 50px 0px 0px"}}>
+                    <div class="imageHolderBar">
+                        <div style={{marginLeft:"15px", paddingTop:"5px"}}>
+                            <img src={greencircle} style={{width:"20px", height:"20px"}}/>
+                            <img src={yellowcircle} style={{width:"18px", margin:"0px 5px 0px 5px"}}/>
+                            <img src={redcircle} style={{width:"20px", height:"20px"}}/>
+                        </div>
                     </div>
+                    <div style={{textAlign:"center",marginTop:"10px"}}>
+                        <img style={{width:"600px", height:"450px"}} src={examplePic}/>
+                    </div>
+                    
+                    {/* <div style={{fontWeight:"lighter", textAlign:"center", marginTop:"10px"}}><i>Featured community work</i></div> */}
+                </div>
+
+
                     <div class="loginBox" style={{padding:"20px 50px 0px 50px"}}>
                         <h3 style={{color:"#4306FF"}}>Customize</h3>
                         <form style={{position:"relative"}}>
