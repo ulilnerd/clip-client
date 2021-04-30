@@ -311,8 +311,16 @@ label {
 .imageHolder {
     width:800px;
     height:500px;
-    border:solid #4306FF 3px;
+    border:solid #4306FF 4px;
     border-radius:20px;
+}
+.imageHolderBar {
+  width:100%;
+  background-color:rgb(230,231,232);
+  height:30px;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+  border-bottom: solid #4306FF 4px;
 }
 
 .WhatWeDoText {

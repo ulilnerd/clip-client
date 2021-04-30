@@ -32,7 +32,7 @@ class Login extends Component {
                                 <br/>
                                 <br/>
                                 <br/>
-                                <a href="#"><div style={{fontWeight:"lighter", textAlign:"center"}}>No account? <br/> Become a member, it's free!</div></a>
+                                <a href="/createaccount"><div style={{fontWeight:"lighter", textAlign:"center"}}>No account? <br/> Become a member, it's free!</div></a>
                             </form>
                         </div>
                    </div>
