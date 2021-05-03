@@ -46,10 +46,10 @@ class CreateAccount extends Component {
                         <br/>
                         <br/>
                         <br/>
-                        <div class="loginButton"><a style={{border:"solid 2px black", borderRadius:"6px", padding:"10px 50px 10px 50px", backgroundColor:"white", boxShadow:"6px 6px lightgreen, 6px 6px 0 2px black"}} href="#">Create Account</a></div>    
+                        <div class="loginButton"><a style={{border:"solid 2px black", borderRadius:"6px", padding:"10px 50px 10px 50px", backgroundColor:"white", boxShadow:"6px 6px lightgreen, 6px 6px 0 2px black"}} href="/accountsetup">Create Account</a></div>    
                         <br/>
                         <br/>
-                        <a href="#"><div style={{fontWeight:"lighter", textAlign:"center"}}>Got an account? Log in!</div></a>
+                        <a href="/login"><div style={{fontWeight:"lighter", textAlign:"center"}}>Got an account? Log in!</div></a>
                     </form>
                     </div>
                 </div>

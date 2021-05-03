@@ -9,6 +9,10 @@ import PricingPlans from './PricingPlans';
 import WhatWeDo from './WhatWeDo';
 import CreateAccount from './CreateAccount';
 import Dashboard from './Dashboard';
+import CurrentProjects from './CurrentProjects';
+import PublishedProjects from './PublishedProjects';
+
+import AccountSetup from './AccountSetup';
 // import ClipLogo from './images/clip.png';
 
 import {
@@ -33,6 +37,9 @@ class App extends Component {
                 <Route path="/whatwedo" component={WhatWeDo}/>
                 <Route path="/createaccount" component={CreateAccount}/>
                 <Route path="/dashboard" component={Dashboard}/>
+                <Route path="/currentprojects" component={CurrentProjects}/>
+                <Route path="/publishedprojects" component={PublishedProjects}/>
+                <Route path="/accountsetup" component={AccountSetup}/>
             </Switch>
             <Footer />
         </body>

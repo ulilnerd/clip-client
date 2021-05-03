@@ -350,7 +350,11 @@ label {
 }
 
 .projectPreview {
-  height:700px;
+  height:550px;
   margin-top:20px;
   margin-right:20px;
+}
+
+.recentProjText {
+  width: 300px;
 }

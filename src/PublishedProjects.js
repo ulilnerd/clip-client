@@ -8,7 +8,7 @@ import greencircle from './images/greencircle.png';
 
 import magGlass from './images/magGlass.png';
 
-class Dashboard extends Component {
+class PublishedProjects extends Component {
 
 
     render() {
@@ -23,9 +23,9 @@ class Dashboard extends Component {
                         <br/>
                         <a href="#" class="dashboardList">Overview</a>
                         <br/>
-                        <a href="/currentprojects" class="dashboardList">Current Projects</a>
+                        <a href="#" class="dashboardList">Current Projects</a>
                         <br/>
-                        <a href="/publishedprojects" class="dashboardList">Published Projects</a>
+                        <a href="#" class="dashboardList">Published Projects</a>
                         <br/>
                         <a href="#" class="dashboardList">Shared Projects</a>
                         <br/>
@@ -38,14 +38,7 @@ class Dashboard extends Component {
                     </ul>
                 </div>
                 <div style={{marginLeft:"50px"}}>
-                    <h1 style={{color:"#4306FF",fontSize:"24px", fontWeight:"bold"}}>Overview</h1>
-                    <div style={{display:"flex",position:"relative"}}>   
-                        <div class="imageHolder" style={{textAlign:"center"}}><i style={{fontWeight:'lighter',fontSize:"18px"}}>News + Features</i></div>
-                        <div class="imageHolder" style={{width:"500px",height:"500px",marginLeft:"20px",textAlign:"center"}}><i style={{fontWeight:'lighter',fontSize:"18px"}}>Tips + Tricks</i></div>
-                    </div>
-                    <br/>
-                    
-                    <a href="#" style={{color:"#4306FF",fontSize:"24px", fontWeight:"bold"}}>Recent Projects</a>
+                    <h1><a href="#" style={{color:"#4306FF",fontSize:"24px", fontWeight:"bold"}}>Published Projects</a></h1>
                     <div class="projectPreview">
                         <div style={{display:"flex",position:"relative"}}> 
                             <br/>
@@ -116,4 +109,4 @@ class Dashboard extends Component {
     }
 } 
 
-export default Dashboard;
+export default PublishedProjects;
