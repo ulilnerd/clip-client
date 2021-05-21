@@ -22,17 +22,44 @@ import {
   Link
 } from "react-router-dom";
 
-class App extends Component {
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        isLoggedIn: 'No',
+        username:'',
+        password:''
+    };
+  }
+
+  handleCallback = (childData,username,password) =>{
+    this.setState({
+        isLoggedIn: childData,
+        username: username,
+        password: password
+    })
+    sessionStorage.setItem("isLoggedIn", this.state.isLoggedIn);
+    sessionStorage.setItem("username", this.state.username);
+    sessionStorage.setItem("password", this.state.password);
+    console.log(this.state.isLoggedin)
+  }
 
   render() {
     return (
       <Router>
       <div className="App">
         <body>
-            <Navbar/>
+            <Navbar isLoggedIn={this.state.isLoggedIn}/>
+            isLoggedIn: {sessionStorage.getItem("isLoggedIn")}
+            <br/>
+            Username: {sessionStorage.getItem("username")}
+            <br/>
+            Password: {sessionStorage.getItem("password")}
             <Switch>
                 <Route path="/" component={MainPage} exact/>
-                <Route path="/login" component={Login}/>
+                <Route path="/login" render={ () => <Login loginCallback={this.handleCallback}/> }/>
                 <Route path="/plans" component={PricingPlans}/>
                 <Route path="/whatwedo" component={WhatWeDo}/>
                 <Route path="/createaccount" component={CreateAccount}/>
