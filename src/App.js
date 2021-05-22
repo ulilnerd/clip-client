@@ -13,6 +13,7 @@ import CurrentProjects from './CurrentProjects';
 import PublishedProjects from './PublishedProjects';
 
 import AccountSetup from './AccountSetup';
+import axios from 'axios';
 // import ClipLogo from './images/clip.png';
 
 import {
@@ -30,20 +31,65 @@ class App extends React.Component {
     this.state = {
         isLoggedIn: 'No',
         username:'',
-        password:''
+        password:'',
+        name: '',
+        id:'',
+        email:'',
+        pronoun:'',
+        accounttype:'',
     };
   }
 
-  handleCallback = (childData,username,password) =>{
+  handleCallback = (childData,username,password,email,name,pronoun,accounttype) =>{
     this.setState({
         isLoggedIn: childData,
         username: username,
-        password: password
+        password: password,
+        email: email,
+        name: name,
+        pronoun: pronoun,
+        accounttype: accounttype,
+        statusColor:"green"
     })
     sessionStorage.setItem("isLoggedIn", this.state.isLoggedIn);
     sessionStorage.setItem("username", this.state.username);
     sessionStorage.setItem("password", this.state.password);
+    sessionStorage.setItem("name", this.state.name);
+    sessionStorage.setItem("id", this.state.id);
+    sessionStorage.setItem("email", this.state.email);
+    sessionStorage.setItem("pronoun", this.state.pronoun);
+    sessionStorage.setItem("accounttype", this.state.accounttype);
+
+    sessionStorage.setItem("statusColor", "green");
     console.log(this.state.isLoggedin)
+  }
+
+  handleCreateAccount = (email,username,password) => {
+    this.setState({
+      username: username,
+      password: password,
+      email: email
+    })
+    sessionStorage.setItem("username", this.state.username);
+    sessionStorage.setItem("password", this.state.password);
+    sessionStorage.setItem("email", this.state.email);
+  }
+
+  handleAccountSetup = (name,pronoun) => {
+    this.setState({
+      name: name,
+      pronoun: pronoun
+    })
+    sessionStorage.setItem("name", this.state.name);
+    sessionStorage.setItem("pronoun", this.state.pronoun);
+
+    axios.post('http://clip-api.herokuapp.com/api/v1/users/createuser?username='+sessionStorage.getItem("username")+'&password='+sessionStorage.getItem("password")+'&email='+sessionStorage.getItem("email")+'&name='+sessionStorage.getItem("name")+'&pronoun='+sessionStorage.getItem("pronoun"))
+        .then(results => {
+            console.log(results)
+        })
+        .catch(error => {
+            console.log(error)
+        })
   }
 
   render() {
@@ -52,11 +98,17 @@ class App extends React.Component {
       <div className="App">
         <body>
             <Navbar isLoggedIn={this.state.isLoggedIn}/>
-            isLoggedIn: {sessionStorage.getItem("isLoggedIn")}
+            isLoggedIn: <i style={{color:sessionStorage.getItem("statusColor")}}>{sessionStorage.getItem("isLoggedIn")}</i>
             <br/>
             Username: {sessionStorage.getItem("username")}
             <br/>
-            Password: {sessionStorage.getItem("password")}
+            Name: {sessionStorage.getItem("name")}
+            <br/>
+            Account Type: {sessionStorage.getItem("accounttype")}
+            <br/>
+            Email: {sessionStorage.getItem("email")}
+            <br/>
+            Pronoun: {sessionStorage.getItem("pronoun")}
             <Switch>
                 <Route path="/" component={MainPage} exact/>
                 <Route path="/login" render={ () => <Login loginCallback={this.handleCallback}/> }/>

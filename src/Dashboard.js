@@ -10,13 +10,12 @@ import magGlass from './images/magGlass.png';
 
 class Dashboard extends Component {
 
-
     render() {
         return(
             <div style={{display:"flex",position:"relative"}}>   
                 <div class="profileNav">
                     <ul>
-                        <a href="#" style={{color:"#4306FF",fontSize:"24px", fontWeight:"bold"}}>Jodi Cheung</a>
+                        <a href="#" style={{color:"#4306FF",fontSize:"24px", fontWeight:"bold"}}>{sessionStorage.getItem("name")}</a>
                         <br/>
                         <br/>
                         <div class="imageHolder" style={{width:"200px", height:"200px"}}></div>

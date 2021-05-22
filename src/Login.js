@@ -39,7 +39,11 @@ class Login extends Component {
             }
             else if (results.data[0].username == this.state.username && results.data[0].password == this.state.password) {
                 console.log(results.data[0])
-                this.props.loginCallback('Yes',results.data[0].username,results.data[0].password);
+                this.props.loginCallback('Yes',results.data[0].username,results.data[0].password, results.data[0].email, results.data[0].name, results.data[0].pronoun, results.data[0].accounttype);
+                this.setState({
+                    password: '',
+                    username: ''
+                });
             }
         })
         .catch(error => {
