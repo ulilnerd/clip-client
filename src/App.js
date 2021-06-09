@@ -11,6 +11,7 @@ import CreateAccount from './CreateAccount';
 import Dashboard from './Dashboard';
 import CurrentProjects from './CurrentProjects';
 import PublishedProjects from './PublishedProjects';
+import NotFoundPage from "./404";
 
 import AccountSetup from './AccountSetup';
 import axios from 'axios';
@@ -39,58 +40,7 @@ class App extends React.Component {
         accounttype:'',
     };
   }
-
-  handleCallback = (childData,username,password,email,name,pronoun,accounttype) =>{
-    this.setState({
-        isLoggedIn: childData,
-        username: username,
-        password: password,
-        email: email,
-        name: name,
-        pronoun: pronoun,
-        accounttype: accounttype,
-        statusColor:"green"
-    })
-    sessionStorage.setItem("isLoggedIn", this.state.isLoggedIn);
-    sessionStorage.setItem("username", this.state.username);
-    sessionStorage.setItem("password", this.state.password);
-    sessionStorage.setItem("name", this.state.name);
-    sessionStorage.setItem("id", this.state.id);
-    sessionStorage.setItem("email", this.state.email);
-    sessionStorage.setItem("pronoun", this.state.pronoun);
-    sessionStorage.setItem("accounttype", this.state.accounttype);
-
-    sessionStorage.setItem("statusColor", "green");
-    console.log(this.state.isLoggedin)
-  }
-
-  handleCreateAccount = (email,username,password) => {
-    this.setState({
-      username: username,
-      password: password,
-      email: email
-    })
-    sessionStorage.setItem("username", this.state.username);
-    sessionStorage.setItem("password", this.state.password);
-    sessionStorage.setItem("email", this.state.email);
-  }
-
-  handleAccountSetup = (name,pronoun) => {
-    this.setState({
-      name: name,
-      pronoun: pronoun
-    })
-    sessionStorage.setItem("name", this.state.name);
-    sessionStorage.setItem("pronoun", this.state.pronoun);
-
-    axios.post('http://clip-api.herokuapp.com/api/v1/users/createuser?username='+sessionStorage.getItem("username")+'&password='+sessionStorage.getItem("password")+'&email='+sessionStorage.getItem("email")+'&name='+sessionStorage.getItem("name")+'&pronoun='+sessionStorage.getItem("pronoun"))
-        .then(results => {
-            console.log(results)
-        })
-        .catch(error => {
-            console.log(error)
-        })
-  }
+  
 
   render() {
     return (
@@ -111,7 +61,7 @@ class App extends React.Component {
             Pronoun: {sessionStorage.getItem("pronoun")}
             <Switch>
                 <Route path="/" component={MainPage} exact/>
-                <Route path="/login" render={ () => <Login loginCallback={this.handleCallback}/> }/>
+                <Route path="/login" component={Login}/>
                 <Route path="/plans" component={PricingPlans}/>
                 <Route path="/whatwedo" component={WhatWeDo}/>
                 <Route path="/createaccount" component={CreateAccount}/>
@@ -119,6 +69,7 @@ class App extends React.Component {
                 <Route path="/currentprojects" component={CurrentProjects}/>
                 <Route path="/publishedprojects" component={PublishedProjects}/>
                 <Route path="/accountsetup" component={AccountSetup}/>
+                <Route component={NotFoundPage}/>
             </Switch>
             <Footer />
         </body>
