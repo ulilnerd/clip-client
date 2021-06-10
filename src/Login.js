@@ -59,9 +59,6 @@ function Login() {
         })
         event.preventDefault();
     }
-
-  
-
         return(
            <div>
                <div class="containerCenter">

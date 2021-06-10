@@ -37,6 +37,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/> 
       <div className="App">
         <body>
             <Navbar isLoggedIn={this.state.isLoggedIn}/>
