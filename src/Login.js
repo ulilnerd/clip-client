@@ -18,17 +18,6 @@ import {
 
 function Login() {
 
-    // constructor(props) {
-    //     super(props);
-    
-    //     this.state = {
-    //         username:'',
-    //         password:'',
-    //     };
-    //     this.handleUsernameChange = this.handleUsernameChange.bind(this);
-    //     this.handlePasswordChange = this.handlePasswordChange.bind(this);
-    //     this.checkLogin = this.checkLogin.bind(this);
-    //   }
     const history = useHistory();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -62,6 +51,7 @@ function Login() {
                 sessionStorage.setItem("pronoun", results.data[0].pronoun);
                 sessionStorage.setItem("accounttype", results.data[0].accounttype);
                 history.push("/");
+                window.location.reload();
             }
         })
         .catch(error => {

@@ -31,34 +31,15 @@ class App extends React.Component {
 
     this.state = {
         isLoggedIn: 'No',
-        username:'',
-        password:'',
-        name: '',
-        id:'',
-        email:'',
-        pronoun:'',
-        accounttype:'',
     };
   }
   
-
   render() {
     return (
       <Router>
       <div className="App">
         <body>
             <Navbar isLoggedIn={this.state.isLoggedIn}/>
-            isLoggedIn: <i style={{color:sessionStorage.getItem("statusColor")}}>{sessionStorage.getItem("isLoggedIn")}</i>
-            <br/>
-            Username: {sessionStorage.getItem("username")}
-            <br/>
-            Name: {sessionStorage.getItem("name")}
-            <br/>
-            Account Type: {sessionStorage.getItem("accounttype")}
-            <br/>
-            Email: {sessionStorage.getItem("email")}
-            <br/>
-            Pronoun: {sessionStorage.getItem("pronoun")}
             <Switch>
                 <Route path="/" component={MainPage} exact/>
                 <Route path="/login" component={Login}/>
