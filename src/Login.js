@@ -32,7 +32,7 @@ function Login() {
     }
 
     const checkLogin = (event) => {
-        axios.get('http://clip-api.herokuapp.com/api/v1/users/find?username='+username+'&password='+password)
+        axios.get('https://clip-api.herokuapp.com/api/v1/users/find?username='+username+'&password='+password)
         .then(results => {
             if (results.data[0] == undefined) {
                 console.log('Account not found')
