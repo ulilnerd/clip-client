@@ -36,6 +36,8 @@ function Login() {
         .then(results => {
             if (results.data[0] == undefined) {
                 console.log('Account not found')
+                setUsername('');
+                setPassword('');
             }
             else if (results.data[0].username == username && results.data[0].password == password) {
                 console.log(results.data[0])
